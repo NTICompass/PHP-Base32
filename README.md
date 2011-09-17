@@ -8,6 +8,7 @@ It supports RFC 4648 or Crockford's implementation (http://www.crockford.com/wrm
 It does not support the check digit from Crockford's implementation yet.
 
 Use:
+
     <?php
       include 'Base32.php'
       $a = new Base32();
