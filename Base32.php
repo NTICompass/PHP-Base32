@@ -5,11 +5,12 @@
  * http://labs.nticompassinc.com
  */
 class Base32{
-	var $encode, $decode;
+	var $encode, $decode, $type;
 	
 	// Supports RFC 4648 (default) or Crockford (http://www.crockford.com/wrmg/base32.html)
 	function __construct($alphabet='rfc4648'){
 		$alphabet = strtolower($alphabet);
+		$this->type = $alphabet;
 		// Crockford's alphabet removes I,L,O, and U
 		$crockfordABC = range('A', 'Z');
 		unset($crockfordABC[8], $crockfordABC[11], $crockfordABC[14], $crockfordABC[20]);
@@ -110,7 +111,7 @@ class Base32{
 	
 	// base32_decode
 	public function base32_decode($base32String){
-		$base32Array = str_split($base32String);
+		$base32Array = str_split(str_replace('-', '', strtoupper($base32String)));
 		$binaryArray = array();
 		$string = '';
 		foreach($base32Array as $str){
