@@ -1,6 +1,6 @@
 <?php
 /**
- * NTICompass' Crappy base32 library for PHP
+ * NTICompass' crappy base32 library for PHP
  * 
  * http://labs.nticompassinc.com
  */
