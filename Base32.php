@@ -46,7 +46,7 @@ class Base32{
 		$binaryArray = $this->bin_chunk($binaryString, 8);
 		$string = '';
 		foreach($binaryArray as $bin){
-			// Pad each value to 8pbits
+			// Pad each value to 8 bits
 			$bin = str_pad($bin, 8, 0, STR_PAD_RIGHT);
 			// Convert binary strings to ascii
 			$string .= chr(bindec($bin));
