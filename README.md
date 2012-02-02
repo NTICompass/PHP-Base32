@@ -15,5 +15,3 @@ Use:
       $base32 = $a->base32_encode('Test'); // KRSXG5A=
       $string = $a->base32_decode('KRSXG5A='); // Test
     ?>
-
-It may not support encoding binary data yet.
